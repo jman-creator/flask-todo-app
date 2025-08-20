@@ -20,7 +20,7 @@ async function loadTodos() {
                 onchange="toggleDone(${todo.id}, this.checked)">
                 ${todo.task}
             </div>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 ms-5">
                 <button class="btn btn-outline-primary" onclick="editTask(${todo.id}, '${todo.task}')">✏️</button>
                 <button class="btn btn-outline-danger" onclick="deleteTodo(${todo.id})">❌</button>
             </div>
