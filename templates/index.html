@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container d-flex flex-column align-items-center">
+        <h1 class="display-1">Todo List</h1>
+
+        <div class="d-flex flex-column gap-4">
+            <!-- Add new task -->
+            <div class="d-flex align-items-center">
+                <input id="taskInput" class="form-control" type="text" placeholder="New task">
+                <button class="btn btn-primary" onclick="addTodo()">Add</button>
+            </div>
+            
+            <!-- Display todos -->
+            <ul id="todoList" class="list-group"></ul>
+        </div>
+        
+    </div>
+</body>
+</html>
